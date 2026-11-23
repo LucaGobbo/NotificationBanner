@@ -1,7 +1,6 @@
 ![Notification Banner](NotificationBanner/Assets/header.png)
 
 [![GitHub contributors](https://img.shields.io/github/contributors/daltron/notificationbanner.svg?style=flat)]() 
-[![License](https://img.shields.io/cocoapods/l/NotificationBannerSwift.svg?style=flat)](http://cocoapods.org/pods/NotificationBannerSwift)
 [![PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/donate/?hosted_button_id=QEBVNMTVX6N88)  
 
 ## Written in Swift 5
@@ -42,43 +41,13 @@ NotificationBanner is an extremely customizable and lightweight library that mak
 
 ### Swift Package Manager
 
-This is the preferred way. All other installation methods are officially deprecated and will no longer be supported in future versions.
+This is the preferred way. CocoaPods is no longer supported.
 
 1. Go to File > Add Packages
 2. The Add Package dialog appears, by default with Apple packages. 
 3. In the upper right hand corner, paste https://github.com/Daltron/NotificationBanner into the search bar
 4. Hit Return to kick off the search
 5. Click Add Package. 
-
-### CocoaPods
-
-NotificationBanner is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-#### Swift 5 + Xcode 11 + iOS 13 Support
-
-```ruby
-pod 'NotificationBannerSwift', '~> 3.0.0'
-```
-
-#### Swift 5 + Xcode 10.x
-
-```ruby
-pod 'NotificationBannerSwift', '2.5.0'
-```
-
-#### Swift 4.2
-
-```ruby
-pod 'NotificationBannerSwift', '2.0.1'
-```
-
-#### Swift 4.0
-
-```ruby
-pod 'NotificationBannerSwift', '1.6.3'
-pod 'MarqueeLabel/Swift', '3.1.6'
-```
 
 Then add `import NotificationBannerSwift` at the top of each file you use NotificationBanner in your project.
 
