@@ -27,6 +27,7 @@
 		607FACD81AFB9204008FA782 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ExampleViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		BBB175BF30B47DB7005DDBB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB175BE30B47DB7005DDBB1 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		994F519A87A30C0CFB80BF18 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BB150F775F66DF9A8CE833B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BBB175BE30B47DB7005DDBB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				5C0BFCB51E7DFCCD00FE49EB /* Classes */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				BBB175BE30B47DB7005DDBB1 /* SceneDelegate.swift */,
 			);
 			name = "Example for NotificationBanner";
 			path = NotificationBanner;
@@ -229,6 +232,7 @@
 				607FACD81AFB9204008FA782 /* ExampleViewController.swift in Sources */,
 				5C025F7B1EE9E09E00ADB444 /* NotificationBannerQueue.swift in Sources */,
 				5C34233C1EB50580004B804C /* CustomBannerColors.swift in Sources */,
+				BBB175BF30B47DB7005DDBB1 /* SceneDelegate.swift in Sources */,
 				5C025F771EE9E09E00ADB444 /* BannerHapticGenerator.swift in Sources */,
 				5C8890A81F7155840032D605 /* NotificationBannerUtilities.swift in Sources */,
 				5CBD22431E83556E0041DC8F /* BasicNotificationBannerCell.swift in Sources */,
@@ -299,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -347,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -363,7 +367,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = S4K2Q6TV87;
 				INFOPLIST_FILE = NotificationBanner/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,7 +389,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = S4K2Q6TV87;
 				INFOPLIST_FILE = NotificationBanner/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
