@@ -20,28 +20,53 @@ import UIKit
 
 class NotificationBannerUtilities: NSObject {
 
+    /// The active window scene, falling back to any foreground scene
+    class var activeWindowScene: UIWindowScene? {
+        if #available(iOS 13.0, *) {
+            let scenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
+            return scenes.first { $0.activationState == .foregroundActive }
+                ?? scenes.first { $0.activationState == .foregroundInactive }
+                ?? scenes.first
+        }
+        return nil
+    }
+
+    /// The key window resolved through the active scene. `UIApplication.keyWindow` is deprecated
+    /// and can return nil on recent iOS versions.
+    class var keyWindow: UIWindow? {
+        if #available(iOS 13.0, *) {
+            if let scene = activeWindowScene,
+               let window = scene.windows.first(where: { $0.isKeyWindow }) ?? scene.windows.first {
+                return window
+            }
+        }
+        return UIApplication.shared.delegate?.window ?? nil
+    }
+
+    /// The current interface orientation, resolved through the active scene
+    class var interfaceOrientation: UIInterfaceOrientation {
+        if #available(iOS 13.0, *), let scene = activeWindowScene {
+            return scene.interfaceOrientation
+        }
+        return UIApplication.shared.statusBarOrientation
+    }
+
     class func isNotchFeaturedIPhone() -> Bool {
-        if #available(iOS 11, *) {
-            if UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0.0 > 0.0 {
-                return true
-            } else {
-                return false
-            }
-        } else {
-            return false
-        }
+        return (keyWindow?.safeAreaInsets.bottom ?? 0.0) > 0.0
     }
-    
+
     class func hasDynamicIsland() -> Bool {
-        if #available(iOS 11, *) {
-            if UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0.0 > 50.0 {
-                return true
-            } else {
-                return false
-            }
-        } else {
-            return false
-        }
+        return (keyWindow?.safeAreaInsets.top ?? 0.0) > 50.0
     }
-    
+
+    /// The height of the status bar area, resolved through the active scene
+    class var statusBarHeight: CGFloat {
+        if #available(iOS 13.0, *) {
+            let height = activeWindowScene?.statusBarManager?.statusBarFrame.height ?? 0
+            if height > 0 { return height }
+            return keyWindow?.safeAreaInsets.top ?? 0
+        }
+        return UIApplication.shared.statusBarFrame.height
+    }
+
 }
